@@ -1,4 +1,4 @@
-#run through pymol
+#run through PyMOL
 
 from pymol import cmd
 load 4ENX.pdb
