@@ -1,5 +1,5 @@
-#run through PyMOL
-
+#!/usr/bin/python
+import pymol
 from pymol import cmd
 load 4ENX.pdb
 cmd.wizard("mutagenesis")
