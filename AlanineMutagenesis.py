@@ -11,7 +11,7 @@ cmd.get_wizard().set_mode('ALA')
 cmd.get_wizard().apply()
 cmd.set_wizard()
 cmd.save('ALAMUT-4ENX.pdb')
-cmd.reinitialize
+cmd.reinitialize('everything')
 #cmd.load("/PATH-TO-FILE/FILE.pdb")
 #cmd.get_wizard().do_select(("res X")) X can be any residue present in the protein
 #cmd.get_wizard().set_mode('VAL') for ALA TO VAL
