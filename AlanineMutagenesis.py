@@ -42,7 +42,7 @@ for output in ProtChainResiList:
 #5.Divide PDBid,Chain, and Residue (p,c,r) present in list to do a proper selection for the PyMOL wizard.
 for p,c,r in ProtChainResiList:
     #If you want to select a range of residues you will have to add above,for example, ProtChainResiList[0:100] to select the
-    #first residue and the 100th one.
+    #first residue to the 100th one.
     cmd.wizard("mutagenesis")
     print(p,c,r)
     cmd.refresh_wizard()
