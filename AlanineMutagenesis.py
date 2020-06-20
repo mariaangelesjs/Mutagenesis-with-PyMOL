@@ -6,11 +6,13 @@
 import os
 import pymol
 from pymol import cmd
+#Definitions :
+#Directory = the path in your computer where you are working or from where you want to load or save your files.
 #1.Change where you want this code to run
-os.chdir('E:/PAPER/AlanineMutagenesis')
+#using os.chdir('directory')
 #2.Load your PDB file. Use V2R INACTIVE as an example or any pdb file. You can also 
 #use cmd.fetch() to get an online pdb (search for the documentation typing 'pymol API' in Google).
-cmd.load("E:\V2R-ML\V2R INACTIVE WITH DUMMIES V2\V2R INACTIVE WITH DUMMIES V2\ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb")
+cmd.load("ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb")
 
 #3.Get all loaded PDB object names in pymol
 PDBs = cmd.get_names()
@@ -73,5 +75,5 @@ for p,c,r in ProtChainResiList:
         #Reinitialize PyMOL to default settings.
         cmd.reinitialize('everything')
         #Load your original (non-mutated) PDB file.
-        cmd.load("E:\V2R-ML\V2R INACTIVE WITH DUMMIES V2\V2R INACTIVE WITH DUMMIES V2\ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb")
+        cmd.load("ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb")
 
