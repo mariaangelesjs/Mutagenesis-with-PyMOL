@@ -4,6 +4,7 @@
 #to do high-throughput mutagenesis on any protein (e.g. receptors of interest)#########################
 #######################################################################################################
 
+#Packages that you will need to install and import within python:
 import os
 import pymol
 from pymol import cmd
@@ -73,7 +74,9 @@ for p,c,r in ProtChainResiList:
         cmd.set_wizard("done")
         #Saving your mutated residue in a single pdb file. Use directory in
         #os.path.basename("(directory)%s"%selection)to add where you want your pdb file
-        #to be saved.
+        #to be saved. 
+        #This will save the residue-specific mutation with the respective file name according to
+        #mutation.
         cmd.save((os.path.basename("%s"%selection)+"-mutation.pdb"),"%s"%PDB)
         #Reinitialize PyMOL to default settings.
         cmd.reinitialize('everything')
