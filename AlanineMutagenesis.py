@@ -1,15 +1,18 @@
 #!/usr/bin/python
-###############################################################################
-#Updated code based on Troels Emtekær Linnet and  Andreas Henschel#############
-#to do high-throughput mutagenesis on any protein (e.g. receptors of interest)#
-###############################################################################
+#######################################################################################################
+#Updated code based on Troels Emtekær Linnet's and  Andreas Henschel's mutagenesis scripts#############
+#to do high-throughput mutagenesis on any protein (e.g. receptors of interest)#########################
+#######################################################################################################
+
 import os
 import pymol
 from pymol import cmd
-#Definitions :
-#Directory = the path in your computer where you are working or from where you want to load or save your files.
-#1.Change where you want this code to run
-#using os.chdir('directory')
+################################################################################################################
+#Definitions :##################################################################################################
+#Directory = the path in your computer where you are working or from where you want to load or save your files.#
+################################################################################################################
+
+#1.Change where you want this code to run using os.chdir('directory').
 #2.Load your PDB file. Use V2R INACTIVE as an example or any pdb file. You can also 
 #use cmd.fetch() to get an online pdb (search for the documentation typing 'pymol API' in Google).
 cmd.load("ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb")
