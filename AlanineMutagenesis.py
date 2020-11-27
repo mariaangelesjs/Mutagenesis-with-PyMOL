@@ -40,7 +40,7 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
         for output in ProtChainResiList:
                  print (output)
      #5.Divide PDBid,Chain, and Residue (p,c,r) present in list to do a proper selection for the PyMOL wizard.
-    for p,c,r in ProtChainResiList:
+    for p,c,r in ProtChainResiList[start_mutation:finish_mutation]:
         #If you want to select a range of residues you will have to add above,for example, ProtChainResiList[0:100] to select the
         ##first residue and the 100th one.
         cmd.wizard("mutagenesis")
@@ -83,4 +83,4 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
             cmd.load(filename)
 
 file = "ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb"
-Mutagenesis(file,'ALA')
+Mutagenesis(file,'ALA',0,100)
