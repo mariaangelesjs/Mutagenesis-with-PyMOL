@@ -26,7 +26,7 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
     ProtChainResiList = []
     for PDB in PDBs:
         #print PDB
-        #### Get the ID numbers of c-alpha (CA) atoms of all residues
+        ###### Get the ID numbers of c-alpha (CA) atoms of all residues
         CAindex = cmd.identify("%s and name CA"%PDB)
         print(CAindex)
         for CAid in CAindex:
@@ -63,7 +63,7 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
        #Print selection to check the output
         print(selection)
         i= 0
-        for i,selection in zip(range(start,finish),selection):
+        for i,selection in zip(str(range(start_mutation,finish_mutation)),selection):
             #Selects where to place the mutation
             cmd.get_wizard().do_select(i)
             #Applies mutation
