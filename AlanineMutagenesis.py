@@ -82,5 +82,6 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
             #Load your original (non-mutated) PDB file.
             cmd.load(filename)
 
+#Example
 file = "ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb"
 Mutagenesis(file,'ALA',0,100)
