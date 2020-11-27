@@ -63,7 +63,7 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
        #Print selection to check the output
         print(selection)
         i= 0
-        for i,selection in zip(str(range(start_mutation,finish_mutation)),selection):
+        for i in range(str(range(start_mutation,finish_mutation))
             #Selects where to place the mutation
             cmd.get_wizard().do_select(i)
             #Applies mutation
