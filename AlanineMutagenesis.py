@@ -8,7 +8,6 @@
 import os
 import pymol
 from pymol import cmd
-import re 
 ################################################################################################################
 #Definitions :##################################################################################################
 #Directory = the path in your computer where you are working or from where you want to load or save your files.#
