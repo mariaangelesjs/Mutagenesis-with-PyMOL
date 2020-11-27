@@ -62,13 +62,10 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
         selection="/%s//%s/%s"%(p,c,r)
        #Print selection to check the output
         print(selection)
-        i= 0
-        for i in range(str(range(start_mutation,finish_mutation))
-            #Selects where to place the mutation
-            cmd.get_wizard().do_select(i)
-            #Applies mutation
-            cmd.get_wizard().apply()
-            i+=1
+        #Selects where to place the mutation
+        cmd.get_wizard().do_select(selection)
+        ##Applies mutation
+        cmd.get_wizard().apply()
         #Save each mutation and reinitialize the session before the next mutation
         ##to have pdb files only with the residue-specific single-point mutation you were
         ##interested.
@@ -86,4 +83,4 @@ def Mutagenesis(filename,mutation_type,start_mutation,finish_mutation):
             cmd.load(filename)
 
 file = "ClassA_v2r_human_Inactive_4BUO_2019-03-14_GPCRDB_B.pdb"
-Mutagenesis(file,'ALA',24,100)
+Mutagenesis(file,'ALA')
